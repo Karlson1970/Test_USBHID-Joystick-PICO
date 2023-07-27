@@ -96,9 +96,9 @@ void loop() {
     u8g2.drawStr(0, 60, buf);
   } while (u8g2.nextPage());
   
-  val = map(Axe_x, 0, 1023, -32767, 32767);
+  val = map(Axe_x, 0, 4095, -32767, 32767);
   gamepad.SetX(val);
-  val = map(Axe_y, 0, 1023, -32767, 32767);
+  val = map(Axe_y, 0, 4095, -32767, 32767);
   gamepad.SetY(val);
   val = map(encoderPos, -256, 256, -32767, 32767);
   gamepad.SetZ(val);
